@@ -10,22 +10,22 @@
     
 
 
-    <button onclick = "alert(showQuantity)"> show Qty </button>
+    <button onclick = "alert('your quantity is ' + showQuantity)"> show Qty </button>
     <br>
     <br>
     
-    <button onclick = "alert(addQuantity)"> add Qty </button>
+    <button onclick = "alert('your quantity is ' + addQuantity)"> add Qty </button>
     <br>
     <br>
-    <button onclick =" alert(plusTwo)"> +2</button>
+    <button onclick =" alert('your quantity is ' + plusTwo)"> +2</button>
     <br>
     <br>
-    <button onclick =" alert(addThree)"> +3 </button>
+    <button onclick =" alert( 'your quantity is ' + addThree)"> +3 </button>
     <br>
     <br>
-    <button onclick = " alert(clearCart)"> clear cart </button>
+    <button onclick = " alert( 'your quantity is ' + clearCart)"> clear cart </button>
     
-
+ 
     
 
 
@@ -34,12 +34,11 @@
     <script>
 
 let quantity = 0;
-let addQuantity = quantity + 1;
-
-let plusTwo = quantity + 2;
+let addQuantity = quantity += 1;
+let plusTwo = quantity += 2;
 let addThree = quantity + 3;
-let showQuantity = addQuantity + plusTwo + addThree;
-let clearCart = quantity;
+let showQuantity = addQuantity+ plusTwo + addThree;
+let clearCart = quantity ;
 
         
         
