@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
+   <link rel="stylesheet" href="style.css">
 <body>
+    
+        
 
+             
+        
     
 
 
-    <button onclick = "alert('your quantity is ' + showQuantity)"> show Qty </button>
-    <br>
-    <br>
+    <!-- <button onclick = "alert('your quantity is ' + showQuantity)"> show Qty </button>
+    // <br>
+    // <br>
     
-    <button onclick = "alert('your quantity is ' + (quantity = quantity +=1))">add Qty </button>
-    <br>
-    <br>
-    <button onclick =" alert('your quantity is ' +(quantity = quantity +=2))"> +2</button>
-    <br>
-    <br>
-    <button onclick =" alert( 'your quantity is ' +(quantity = quantity+=3 ))"> +3 </button>
-    <br>
-    <br>
-    <button onclick = " alert( 'your quantity is ' + clearCart)"> clear cart </button>
+    // <button onclick = "alert('your quantity is ' + (quantity = quantity +=1))">add Qty </button>
+    // <br>
+    // <br>
+    // <button onclick =" alert('your quantity is ' +(quantity = quantity +=2))"> +2</button>
+    // <br>
+    // <br>
+    // <button onclick =" alert( 'your quantity is ' +(quantity = quantity+=3 ))"> +3 </button>
+    // <br>
+    // <br>
+    // <button onclick = " alert( 'your quantity is ' + clearCart)"> clear cart </button>
     
  
     
@@ -35,23 +40,168 @@
 
 let quantity = 0;
 
-// let addTwo = quantity += 2
-// // let addThree = addThree += 3;
+let addTwo = quantity += 2
+let addThree = addThree += 3;
 let showQuantity = quantity;
 let clearCart = 0;
 
         
         
 
-        
+         -->
 
-
-    </script>
 
     
 
+    
+ 
+ 
+ <div class="maindiv">
 
-</body>
-</html>
 
-<!-- quantity = quantity+=3 -->
+  
+    
+  <div class="anodiv">
+    <h4>STUDENT RESULTS</h4>
+    <br>
+    
+
+   
+    <input type = " text"  placeholder = 'Enter Your Marks' id= "english"><br>
+    <h4>English results</h4>
+    
+    
+   
+
+    
+     <input type = " text "  placeholder = 'Enter Your Marks' id= "isiZulu"><br>
+     <h4>Isizulu Results</h4>
+     
+     
+ 
+ 
+
+ 
+     <input type="text" placeholder = 'Enter Your Marks ' id="lifeSciences"><br>
+     <h4>Life Sciences Results</h4>
+     
+     
+     
+
+
+     
+     <input type="text" placeholder = 'Enter Your Marks ' id="physics"><br>
+     <h4>Physical Sciences Results</h4>
+     
+      
+     
+
+     
+     <input type="text" placeholder = 'Enter Your Marks ' id="mathematics"><br>
+     <h4> Mathematics Results</h4>
+     
+    
+     
+        
+
+
+     
+     <input type="text" placeholder = 'Enter Your Marks ' id="geography"><br>
+     <h4> Geography Results</h4>
+     
+     
+    
+
+     <input type="text" placeholder = 'Enter Your Marks ' id="lifeOrientation"><br>
+     <h4>Life Orientation Results</h4>
+     <br>
+     
+   
+
+    <button onclick = "calculateResults()"> calculate Results </button>
+    
+
+     
+     <br>
+     
+    
+    
+ </div>
+</div>
+ 
+
+ 
+
+
+        
+
+<h1 id="resultMessage"></h1>
+     
+     
+    
+    <script>
+       
+        function calculateResults(){
+
+
+        let english= Number(document.getElementById('english').value);
+        let isiZulu=Number(document.getElementById('isiZulu').value);
+       let lifeSciences= Number(document.getElementById('lifeSciences').value);
+       let physicalSciences=Number(document.getElementById('physics').value);
+         let geography=Number(document.getElementById('geography').value);
+        let lifeOrientation=Number(document.getElementById('lifeOrientation').value);
+        let mathematics=Number(document.getElementById('mathematics').value);
+        let average = calculateAverage(english,isiZulu ,geography,mathematics, lifeSciences, physicalSciences,lifeOrientation);
+        alert('Your average mark is: ' + average.toFixed(2));
+        
+        
+     
+
+        
+        
+
+      let  message = document.getElementById('resultMessage');
+      if ( average < 50 ){ 
+        message.innerHTML = 'Your average mark is    '  + average.toFixed(2)+' You have failed!!😭 ';
+       
+    
+    }
+    else 
+    {
+        
+        message .innerHTML = 'Your average mark is  ' + average.toFixed(2) + ' You have passed!! 😌' ;
+  }
+        
+
+        
+    
+        
+
+     function calculateAverage(english,isiZulu ,geography,mathematics, lifeSciences, physicalSciences,lifeOrientation){
+        
+        
+
+     let totalMarks =  english + isiZulu+ lifeSciences+ physicalSciences+ geography+mathematics+lifeOrientation;
+        
+     let average= totalMarks/7;
+        
+         return average;
+     }
+
+    }
+
+
+        
+     
+
+
+</script>
+
+
+
+
+
+
+
+    </body>
+    </html> 
